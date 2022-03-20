@@ -10350,8 +10350,7 @@ MonoBehaviour:
   origins:
   - {fileID: 1049747437176881126}
   muzzleFlash: {fileID: 1919852735748806652}
-  grenade: {fileID: 4902518676761026614, guid: 880888ad981b8488eac9ba2abcf2f630, type: 3}
-  bulletPrefab: {fileID: 7261346382279279158, guid: fb0800d6aecc9487a92b69fa7817f275,
+  bulletPrefab: {fileID: 6577488620475637967, guid: f88e50f19cfd88344ad670ec6c79ebf5,
     type: 3}
   flashOn: 0
   nextTimeToFire: 0
@@ -15852,8 +15851,7 @@ MonoBehaviour:
   origins:
   - {fileID: 5400243105218270020}
   muzzleFlash: {fileID: 3520979351115398804}
-  grenade: {fileID: 4902518676761026614, guid: 880888ad981b8488eac9ba2abcf2f630, type: 3}
-  bulletPrefab: {fileID: 7606699146543326865, guid: 796b617fdb8a54583b3edc1cd0d77484,
+  bulletPrefab: {fileID: 6577488620475637967, guid: 8ef2ba798e7e23048aa0f8a7e13104c5,
     type: 3}
   flashOn: 0
   nextTimeToFire: 0
@@ -21523,7 +21521,7 @@ MonoBehaviour:
   atDoor: 0
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 384
   whatIsLava:
     serializedVersion: 2
     m_Bits: 1024
@@ -21778,8 +21776,7 @@ MonoBehaviour:
   - {fileID: 9118376155538828280}
   - {fileID: 3753469796610108149}
   muzzleFlash: {fileID: 7766348676840864219}
-  grenade: {fileID: 0}
-  bulletPrefab: {fileID: 1198272516417998656, guid: 179bce3d4c04f5e4f9e535168edc6d10,
+  bulletPrefab: {fileID: 6577488620475637967, guid: c6953fc60e330cc45a30d05ead1a09a7,
     type: 3}
   flashOn: 0
   nextTimeToFire: 0
@@ -22004,7 +22001,6 @@ MonoBehaviour:
   impactForce: 200
   origins: []
   muzzleFlash: {fileID: 1544072989521169232}
-  grenade: {fileID: 0}
   bulletPrefab: {fileID: 7606699146543326865, guid: 796b617fdb8a54583b3edc1cd0d77484,
     type: 3}
   flashOn: 0
@@ -22132,8 +22128,7 @@ MonoBehaviour:
   - {fileID: 4754910684907247670}
   - {fileID: 779909523659471798}
   muzzleFlash: {fileID: 1544072989521169232}
-  grenade: {fileID: 4902518676761026614, guid: 880888ad981b8488eac9ba2abcf2f630, type: 3}
-  bulletPrefab: {fileID: 7606699146543326865, guid: c7b20bdf720b1e04795de12b51d514fb,
+  bulletPrefab: {fileID: 6577488620475637967, guid: 4a08bddf239821747a31e7c14487514f,
     type: 3}
   flashOn: 0
   nextTimeToFire: 0
@@ -22312,8 +22307,7 @@ MonoBehaviour:
   origins:
   - {fileID: 7378823448974802005}
   muzzleFlash: {fileID: 8811692876463580512}
-  grenade: {fileID: 4902518676761026614, guid: 880888ad981b8488eac9ba2abcf2f630, type: 3}
-  bulletPrefab: {fileID: 6577488620475637967, guid: c92c6bca7ae3249f083a2f5aa9edc601,
+  bulletPrefab: {fileID: 6577488620475637967, guid: a89b06d6f1aa13148a5019ac03026f1f,
     type: 3}
   flashOn: 0
   nextTimeToFire: 0
@@ -22548,7 +22542,6 @@ MonoBehaviour:
   impactForce: 200
   origins: []
   muzzleFlash: {fileID: 1544072989521169232}
-  grenade: {fileID: 0}
   bulletPrefab: {fileID: 7606699146543326865, guid: 796b617fdb8a54583b3edc1cd0d77484,
     type: 3}
   flashOn: 0
@@ -22784,7 +22777,6 @@ MonoBehaviour:
   impactForce: 200
   origins: []
   muzzleFlash: {fileID: 1544072989521169232}
-  grenade: {fileID: 0}
   bulletPrefab: {fileID: 7606699146543326865, guid: 796b617fdb8a54583b3edc1cd0d77484,
     type: 3}
   flashOn: 0
@@ -27924,8 +27916,7 @@ MonoBehaviour:
   origins:
   - {fileID: 299887450644402285}
   muzzleFlash: {fileID: 14964455792414052}
-  grenade: {fileID: 4902518676761026614, guid: 880888ad981b8488eac9ba2abcf2f630, type: 3}
-  bulletPrefab: {fileID: 7606699146543326865, guid: 796b617fdb8a54583b3edc1cd0d77484,
+  bulletPrefab: {fileID: 6577488620475637967, guid: 0df9121443fdb4548afd97d5c6b4a4ee,
     type: 3}
   flashOn: 0
   nextTimeToFire: 0

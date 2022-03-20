@@ -13,9 +13,6 @@ public class Gun : MonoBehaviour
 
     public Transform[] origins;
     public ParticleSystem muzzleFlash;
-    //public GameObject impactEffect;
-    //public GameObject explosion;
-    public GameObject grenade;
     public GameObject bulletPrefab;
 
 
@@ -31,11 +28,6 @@ public class Gun : MonoBehaviour
 
     // float curFov;
 
-    void Start()
-    {
-        // curFov = origins.fieldOfView;
-        // origins = transform;
-    }
     // Update is called once per frame
     void Update()
     {
@@ -54,23 +46,12 @@ public class Gun : MonoBehaviour
     	muzzleFlash.Play();
         recoil.Fire();
 
-    	// RaycastHit hit;
         foreach (Transform _transform in origins)
         {
             GameObject bulletObject = Instantiate(bulletPrefab, _transform.position, _transform.rotation);
             Bullet bullet = bulletObject.GetComponent<Bullet>();
             bullet.force = _transform.forward;
         }
-
-    	// if (Physics.Raycast(origins.transform.position, origins.transform.forward, out hit, range))
-    	// {
-        //     Target target = hit.transform.GetComponent<Target>();
-        //     if (target != null)
-        //     {
-        //         target.TakeDamage(damage);
-        //     }
-
-    	// }
 
         if (playerRb != null)
         {

@@ -6,114 +6,114 @@ public class CrosshairScript : MonoBehaviour
 {
     [SerializeField] private RectTransform crosshair;
 
-    public GameObject player; // We will reference a boolean from the player's "PlayerMove" script 
+    public GameObject player;
 
     public float aimSize = 25f;
     public float idleSize = 50f;
     public float walkSize = 75f;
     public float runJumpSize = 125f;
-    public float currentSize = 50f; // We set the initial currentSize float to "50" in order to prevent visible scaling at game start
-    public float speed = 10f; // Crosshair scaling speed
+    public float currentSize = 50f;
+    public float speed = 10f;
 
-    private void Update() // Called once per frame
+    private void Update()
     {
-        if (Aiming) // If "Aiming" boolean is set to true
+        if(Aiming)
         {
-            currentSize = Mathf.Lerp(currentSize, aimSize, Time.deltaTime * speed); // Lerp the currentSize float to aimSize float
+            currentSize = Mathf.Lerp(currentSize, aimSize, Time.deltaTime * speed);
         }
-        else if (Walking) // If "Walking" boolean is set to true
+        else if(Walking)
         {
-            currentSize = Mathf.Lerp(currentSize, walkSize, Time.deltaTime * speed); // Lerp the currentSize float to walkSize float
+            currentSize = Mathf.Lerp(currentSize, walkSize, Time.deltaTime * speed);
         }
-        else if (Running || Jumping) // If "Running" or "Jumping" boolean is set to true
+        else if(Running || Jumping)
         {
-            currentSize = Mathf.Lerp(currentSize, runJumpSize, Time.deltaTime * speed); // Lerp the currentSize float to runJumpSize float
+            currentSize = Mathf.Lerp(currentSize, runJumpSize, Time.deltaTime * speed);
         }
-        else // if the player is idle
+        else
         {
-            currentSize = Mathf.Lerp(currentSize, idleSize, Time.deltaTime * speed); // Lerp the currentSize float to idleSize float
+            currentSize = Mathf.Lerp(currentSize, idleSize, Time.deltaTime * speed);
         }
 
-        crosshair.sizeDelta = new Vector2(currentSize, currentSize); // Resize the crosshair X and Y values to the currentSize float 
+        crosshair.sizeDelta = new Vector2(currentSize, currentSize);
     }
 
-    public bool Aiming // Define the "Aiming" boolean
+    public bool Aiming
     {
-        get // Use the get method to return a value for the "Aiming" boolean
+        get
         {
-            if (Input.GetMouseButton(1)) // If the right mouse button is pressed
+            if(Input.GetMouseButton(1))
             {
-                if (!Walking && !Running && !Jumping) // If the "Walking", "Running" and "Jumping" booleans equal false
+                if(!Walking && !Running && !Jumping)
                 {
-                    return true; // Return a true value for the aiming boolean
+                    return true;
                 }
-                else // If the "Walking", "Running" and/or "Jumping" booleans equal true
+                else
                 {
-                    return false; // Return a false value for the aiming boolean
-                }
-            }
-            else // If the right mouse button is not pressed
-            {
-                return false; // Return a false value for the aiming boolean
-            }
-        }
-    }
-
-    bool Walking // Define the "Walking" boolean
-    {
-        get // Use the get method to return a value for the "Walking" boolean
-        {
-            if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0) // If Unity's input buttons for "Horizontal" and/or "Vertical" are being pressed
-            {
-                if (Input.GetKey(KeyCode.LeftShift) == false && !Jumping) // If the left shift button is not being pressed and the "Jumping" boolean is equal to false
-                {
-                    return true; // Return a true value for the "Walking" boolean
-                }
-                else // If the left shift button is being pressed and/or the "Jumping" boolean is equal to true
-                {
-                    return false; // Return a false value for the "Walking" boolean
+                    return false;
                 }
             }
-            else // If Unity's input buttons for "Horizontal" and/or "Vertical" are not being pressed
+            else
             {
-                return false; // Return a false value for the "Walking" boolean
+                return false;
             }
         }
     }
 
-    bool Running // Define the "Running" boolean
+    bool Walking
     {
-        get // Use the get method to return a value for the "Running" boolean
+        get
         {
-            if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0) // If Unity's input buttons for "Horizontal" and/or "Vertical" are being pressed
+            if(Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
             {
-                if (Input.GetKey(KeyCode.LeftShift) == true && !Jumping) // If the left shift button is being pressed and the "Jumping" boolean is equal to false
+                if(Input.GetKey(KeyCode.LeftShift) == false && !Jumping)
                 {
-                    return true; // Return a true value for the "Running" boolean
+                    return true;
                 }
-                else // If the left shift button is not being pressed and/or the "Jumping" boolean is equal to true
+                else
                 {
-                    return false; // Return a false value for the "Running" boolean
+                    return false;
                 }
             }
-            else // If Unity's input buttons for "Horizontal" and/or "Vertical" are not being pressed
+            else
             {
-                return false; // Return a false value for the "Running" boolean
+                return false;
             }
         }
     }
 
-    bool Jumping // Define the "Jumping" boolean
+    bool Running
     {
-        get // Use the get method to return a value for the "Jumping" boolean
+        get
         {
-            if (player.GetComponent<RbPlayerMovement>().grounded == false) // If the "grounded" boolean of the "PlayerMove" script equals false
+            if(Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
             {
-                return true; // Return a true value for the "Jumping" boolean
+                if(Input.GetKey(KeyCode.LeftShift) == true && !Jumping)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
-            else // If the "grounded" boolean of the "PlayerMove" script equals true
+            else
             {
-                return false; // Return a false value for the "Jumping" boolean
+                return false;
+            }
+        }
+    }
+
+    bool Jumping
+    {
+        get
+        {
+            if(player.GetComponent<RbPlayerMovement>().grounded == false)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }

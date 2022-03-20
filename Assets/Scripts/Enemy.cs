@@ -29,36 +29,30 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //transform.LookAt(target, Vector3.up);
-
         float distance = Vector3.Distance(target.position, transform.position);
 
-    	if (distance <= lookRadius)
+    	if(distance <= lookRadius)
     	{
     		agent.SetDestination(target.position);
 
-            if (isDroneEnemy)
+            if(isDroneEnemy)
             {
-                // if (target.transform.position.z != transform.position.z)
-                // {
-                //     transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
-                // }
                 Vector3 newPos = new Vector3(transform.position.x, transform.position.y, target.transform.position.z);
                 transform.position = Vector3.Lerp(transform.position, newPos, Time.deltaTime);
             }
     	}
 
-        if (distance <= agent.stoppingDistance)
+        if(distance <= agent.stoppingDistance)
         {
             FaceTarget();
             agent.velocity = Vector3.zero;
         }
 
-        if (animator != null && agent.velocity != Vector3.zero)
+        if(animator != null && agent.velocity != Vector3.zero)
         {
             animator.SetBool("IsInMotion", true);
         }
-        if (animator != null && agent.velocity == Vector3.zero)
+        if(animator != null && agent.velocity == Vector3.zero)
         {
            animator.SetBool("IsInMotion", false);
         }

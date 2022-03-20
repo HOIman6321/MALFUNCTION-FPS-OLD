@@ -9,8 +9,6 @@ public class MainMenu : MonoBehaviour
 	
 	public void PlayGame ()
 	{
-		// SceneManager.LoadScene("LEVEL1");
-		// Time.timeScale = 1f;
 		playMenu.SetActive(true);
 		gameObject.SetActive(false);
 	}

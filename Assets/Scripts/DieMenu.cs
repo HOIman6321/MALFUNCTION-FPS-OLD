@@ -22,10 +22,6 @@ public class DieMenu : MonoBehaviour
 
     public void Again()
     {
-    	// CrosshairUi.SetActive(true);
-    	// DieMenuUi.SetActive(false);
-    	// Time.timeScale = 1f;
-    	// Cursor.lockState = CursorLockMode.Locked;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

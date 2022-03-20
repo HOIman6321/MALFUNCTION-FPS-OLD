@@ -158,14 +158,15 @@ MonoBehaviour:
   range: 1000
   fireRate: 5
   impactForce: 9000
-  fpsCam: {fileID: 2168079555887742611}
+  origins: []
   muzzleFlash: {fileID: 160198807365953446}
-  grenade: {fileID: 4902518676761026614, guid: 880888ad981b8488eac9ba2abcf2f630, type: 3}
   bulletPrefab: {fileID: 6577488620475637967, guid: c92c6bca7ae3249f083a2f5aa9edc601,
     type: 3}
   flashOn: 0
   nextTimeToFire: 0
   grenadeThrowForce: 250
+  playerRb: {fileID: 0}
+  thrust: 0
 --- !u!4 &4373650001108766057 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ade2081b7ce3049d58d316fa72907908,
