@@ -4,17 +4,30 @@ using UnityEngine;
 
 public class MinigunRotate : MonoBehaviour
 {
-    public float Speed;
-    private float _currentTime;
+    public float maxSpeed;
+    float speed;
+    public float acceleration;
+    public float deceleration;
+
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Fire1"))
+        if(Input.GetButton("Fire1") && Time.timeScale > 0f && speed < maxSpeed)
         {
-        	// transform.Rotate(0, 1200 * Time.deltaTime, 0);
-            _currentTime += Time.deltaTime;
-            transform.Rotate(0, Speed * _currentTime, 0);
+            speed = speed + acceleration * Time.deltaTime;
         }
+        else
+        {
+            if(speed > deceleration * Time.deltaTime)
+            {
+                speed = speed - deceleration * Time.deltaTime;
+            }
+            else
+            {
+                speed = 0f;
+            }
+        }
+        transform.Rotate(0, speed * Time.deltaTime, 0);
     }
 }
