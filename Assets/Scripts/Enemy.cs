@@ -23,7 +23,11 @@ public class Enemy : MonoBehaviour
     void Start()
     {
     	target = PlayerManager.instance.player.transform;
-    	agent = GetComponent<NavMeshAgent>();
+        if(!isDroneEnemy)
+        {
+        	agent = GetComponent<NavMeshAgent>();
+        }
+
     }
 
     // Update is called once per frame
@@ -33,30 +37,51 @@ public class Enemy : MonoBehaviour
 
     	if(distance <= lookRadius)
     	{
-    		agent.SetDestination(target.position);
-
             if(isDroneEnemy)
             {
-                Vector3 newPos = new Vector3(transform.position.x, transform.position.y, target.transform.position.z);
+                Vector3 newPos = new Vector3(target.transform.position.x, target.transform.position.y - 2f, target.transform.position.z);
                 transform.position = Vector3.Lerp(transform.position, newPos, Time.deltaTime);
             }
+            else
+            {
+                agent.SetDestination(target.position);
+            }
     	}
-
-        if(distance <= agent.stoppingDistance)
+        if(!isDroneEnemy)
+        {
+            if(distance <= agent.stoppingDistance)
+            {
+                FaceTarget();
+                agent.velocity = Vector3.zero;
+            }
+        }
+        else
         {
             FaceTarget();
-            agent.velocity = Vector3.zero;
         }
 
-        if(animator != null && agent.velocity != Vector3.zero)
+        if(!isDroneEnemy)
         {
-            animator.SetBool("IsInMotion", true);
+            if(animator != null && agent.velocity != Vector3.zero)
+            {
+                animator.SetBool("IsInMotion", true);
+            }
+            if(animator != null && agent.velocity == Vector3.zero)
+            {
+                animator.SetBool("IsInMotion", false);
+            }
         }
-        if(animator != null && agent.velocity == Vector3.zero)
+        else
         {
-           animator.SetBool("IsInMotion", false);
+            if(animator != null)
+            {
+                animator.SetBool("IsInMotion", true);
+            }
+            if(animator != null)
+            {
+                animator.SetBool("IsInMotion", false);
+            }
         }
-        
     }
 
     void FaceTarget()
