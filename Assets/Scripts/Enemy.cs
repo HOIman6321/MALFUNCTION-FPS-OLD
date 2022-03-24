@@ -12,8 +12,9 @@ public class Enemy : MonoBehaviour
     public Animator animator;
     
     public bool isDroneEnemy = false;
+    public int droneStoppingDistance = 1;
 
-    public float speed = 20;
+    public float speed = 20f;
 
 
 	Transform target;
@@ -39,8 +40,11 @@ public class Enemy : MonoBehaviour
     	{
             if(isDroneEnemy)
             {
-                Vector3 newPos = new Vector3(target.transform.position.x, target.transform.position.y - 2f, target.transform.position.z);
-                transform.position = Vector3.Lerp(transform.position, newPos, Time.deltaTime);
+                if(distance >= droneStoppingDistance)
+                {
+                    Vector3 newPos = new Vector3(target.transform.position.x, target.transform.position.y - 2f, target.transform.position.z);
+                    transform.position = Vector3.Lerp(transform.position, newPos, Time.deltaTime * speed / 20f);
+                }
             }
             else
             {
