@@ -12,7 +12,6 @@ public class Gun : MonoBehaviour
     public float impactForce = 200f;
 
     public Transform[] origins;
-    public ParticleSystem muzzleFlash;
     public GameObject bulletPrefab;
 
 
@@ -20,13 +19,9 @@ public class Gun : MonoBehaviour
 
     public float nextTimeToFire = 0f;
 
-    public float grenadeThrowForce = 250f;
-
     public Rigidbody playerRb;
 
     public float thrust;
-
-    // float curFov;
 
     // Update is called once per frame
     void Update()
@@ -43,7 +38,6 @@ public class Gun : MonoBehaviour
 
     void Shoot()
     {
-    	muzzleFlash.Play();
         recoil.Fire();
 
         foreach (Transform _transform in origins)

@@ -126,6 +126,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   animator: {fileID: 0}
   isDroneEnemy: 0
+  droneStoppingDistance: 1
   speed: 20
   shootingInterval: 1
   bulletPrefab: {fileID: 7261346382279279158, guid: 4dbfb3771b4b4ed448c0292ff2f0e400,
@@ -283,6 +284,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   animator: {fileID: 0}
   isDroneEnemy: 0
+  droneStoppingDistance: 1
   speed: 20
 --- !u!114 &1514523907392264068
 MonoBehaviour:
@@ -298,6 +300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 2000
   explosion: {fileID: 5846219792548386868}
+  ragdoll: {fileID: 2522206892823195821, guid: bb73d66537c4b0048b3f53d02ea780c0, type: 3}
   passDoor: {fileID: 0}
   boss: 1
 --- !u!1 &2200229368739103336

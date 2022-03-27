@@ -159,12 +159,10 @@ MonoBehaviour:
   fireRate: 5
   impactForce: 9000
   origins: []
-  muzzleFlash: {fileID: 160198807365953446}
   bulletPrefab: {fileID: 6577488620475637967, guid: c92c6bca7ae3249f083a2f5aa9edc601,
     type: 3}
   flashOn: 0
   nextTimeToFire: 0
-  grenadeThrowForce: 250
   playerRb: {fileID: 0}
   thrust: 0
 --- !u!4 &4373650001108766057 stripped
@@ -259,12 +257,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: fe61c7da06b0e4b2e88f4e6a2b0810c3, type: 3}
---- !u!198 &160198807365953446 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 4910430565582715931, guid: fe61c7da06b0e4b2e88f4e6a2b0810c3,
-    type: 3}
-  m_PrefabInstance: {fileID: 5052046345389087677}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &160198807365953447 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4910430565582715930, guid: fe61c7da06b0e4b2e88f4e6a2b0810c3,

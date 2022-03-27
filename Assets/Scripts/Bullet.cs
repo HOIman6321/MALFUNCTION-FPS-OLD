@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     public Vector3 force;
     public float speed = 1000f;
     public int damage = 10;
+    public ParticleSystem muzzleFlash;
 
     public GameObject soundSource;
     
@@ -30,6 +31,8 @@ public class Bullet : MonoBehaviour
 
     IEnumerator Start()
     {
+        muzzleFlash.Play();
+        muzzleFlash.transform.parent = null;
         GameObject soundSourceObject = Instantiate(soundSource, transform.position, transform.rotation);
     	transform.GetComponent<Rigidbody>().AddForce(force * speed);
         yield return new WaitForSeconds(10f);

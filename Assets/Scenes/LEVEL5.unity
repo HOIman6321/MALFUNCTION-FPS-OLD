@@ -6982,6 +6982,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 50
   explosion: {fileID: 1413225837}
+  ragdoll: {fileID: 4921893230226519276, guid: f74c0f489c995d5478dc4dcf21e94028, type: 3}
   passDoor: {fileID: 0}
   boss: 0
 --- !u!95 &1638408539

@@ -54,6 +54,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   animator: {fileID: 0}
   isDroneEnemy: 1
+  droneStoppingDistance: 1
   speed: 20
 --- !u!65 &2719287497513194856
 BoxCollider:
@@ -102,6 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 50
   explosion: {fileID: 3401322707695571138}
+  ragdoll: {fileID: 4921893230226519276, guid: f74c0f489c995d5478dc4dcf21e94028, type: 3}
   passDoor: {fileID: 0}
   boss: 0
 --- !u!1 &8775066168980283278
@@ -152,6 +154,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   animator: {fileID: 0}
   isDroneEnemy: 0
+  droneStoppingDistance: 1
   speed: 20
   shootingInterval: 0.2
   bulletPrefab: {fileID: 6577488620475637967, guid: 3b16428f9d5a4684da3a890f264ea83b,
