@@ -42,6 +42,7 @@ public class OptionsMenu : MonoBehaviour
 
 	void Start()
 	{
+		slider.value = PlayerPrefs.GetFloat("Volume", 0.75f);
 		// volume.profile.TryGetSettings(out bloomEffect);
 		// volume.profile.TryGetSettings(out colorGradingEffect);
 		// volume.profile.TryGetSettings(out motionBlurEffect);
@@ -80,7 +81,6 @@ public class OptionsMenu : MonoBehaviour
 		// bloomEffect.enabled.Override(isBloomOn);
 		// colorGradingEffect.enabled.Override(isColorGradingOn);
 		// motionBlurEffect.enabled.Override(isMotionBlurOn);
-		slider.value = PlayerPrefs.GetFloat("Volume", 0.75f);
 		SetVolume(slider.value);
 	}
 
