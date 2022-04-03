@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3841994828304004298}
   - component: {fileID: 3841994828304004296}
   - component: {fileID: 3841994828304004297}
-  m_Layer: 7
+  m_Layer: 20
   m_Name: Cube.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4921893230226519276}
-  m_RootOrder: -1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -89.98, y: 100.67, z: 0}
 --- !u!33 &7638917050044267735
 MeshFilter:
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 2917431458068853014}
   - component: {fileID: 4256703377651995413}
   - component: {fileID: 4256703377651995414}
-  m_Layer: 7
+  m_Layer: 20
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4921893230226519276}
-  m_RootOrder: -1
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -89.98, y: 221.4, z: 0}
 --- !u!33 &7963670154264307847
 MeshFilter:
@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 8990567189508589000}
   - component: {fileID: 703376084307892501}
   - component: {fileID: 703376084307892502}
-  m_Layer: 7
+  m_Layer: 20
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4921893230226519276}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &703376084307892503
 MeshFilter:
@@ -353,7 +353,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4921893230226519276}
-  m_Layer: 7
+  m_Layer: 20
   m_Name: Drone Ragdoll
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -393,7 +393,7 @@ GameObject:
   - component: {fileID: 7542297223331853121}
   - component: {fileID: 4088690482763664315}
   - component: {fileID: 4088690482763664316}
-  m_Layer: 7
+  m_Layer: 20
   m_Name: Cube.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -413,7 +413,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4921893230226519276}
-  m_RootOrder: -1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -30.679}
 --- !u!33 &4088690482763664317
 MeshFilter:
@@ -507,7 +507,7 @@ GameObject:
   - component: {fileID: 3968144576552696441}
   - component: {fileID: 3923712402309526570}
   - component: {fileID: 3923712402309526571}
-  m_Layer: 7
+  m_Layer: 20
   m_Name: Cube.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -527,7 +527,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4921893230226519276}
-  m_RootOrder: -1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 45.777}
 --- !u!33 &3923712402309526572
 MeshFilter:
